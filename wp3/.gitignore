@@ -1,0 +1,5 @@
+database/
+logs/
+wordpress/
+docker-compose.yml
+latest-fa_IR.tar.gz
