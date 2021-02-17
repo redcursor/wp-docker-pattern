@@ -38,7 +38,7 @@ services:
             - '9000:9000'
         volumes:
             - ./php/php-uploads.ini:$PHP_INI_ROOT
-            - ./wordpress:$VOLUMES_WORDPRESS_ROOT_DEFAULT
+            - ./html:$VOLUMES_WORDPRESS_ROOT_DEFAULT
         restart: $PHP_FPM_RESTART
 
     nginx:
@@ -51,7 +51,7 @@ services:
         volumes:
             - ./nginx/conf.d:$VOLUMES_NGINX_CONF
             - ./logs/nginx:$VOLUMES_NGINX_LOG
-            - ./wordpress:$VOLUMES_WORDPRESS_ROOT_DEFAULT
+            - ./html:$VOLUMES_WORDPRESS_ROOT_DEFAULT
         restart: $NGINX_RESTART
 
     db:
