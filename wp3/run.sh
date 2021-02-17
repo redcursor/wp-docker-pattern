@@ -62,7 +62,7 @@ services:
         ports:
             - 127.0.0.1:3306:3306
         volumes:
-            - ./database:$VOLUMES_DATABASE
+            - ./db_data:$VOLUMES_DATABASE
         environment:
             MYSQL_ROOT_PASSWORD: $MYSQL_ROOT_PASSWORD
             MYSQL_DATABASE: $MYSQL_DATABASE
